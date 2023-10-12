@@ -1,0 +1,14 @@
+import { storyblokEditable } from "@storyblok/react";
+
+interface I{{pascalCase name}}Props {
+  blok: any;
+}
+
+const {{pascalCase name}} = ({blok}: I{{pascalCase name}}Props) => {
+  return (
+    <section {...storyblokEditable(blok)}>
+      Add your component here
+    </section>);
+};
+
+export default {{pascalCase name}};
