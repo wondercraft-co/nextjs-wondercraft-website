@@ -1,3 +1,7 @@
+import Button from "@/components/atoms/Button";
+import { meetingLink } from "@/utils/constants";
+import Link from "next/link";
+
 export default function MainHero() {
   return (
     <>
@@ -34,12 +38,9 @@ export default function MainHero() {
                 digital products for your clients. We want to help you shine!
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
-                <a
-                  href="#"
-                  className="rounded-md bg-wonder px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-purple-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-wonder"
-                >
-                  Get started
-                </a>
+                <Link href={meetingLink} target="_blank">
+                  <Button>Lets talk about you</Button>
+                </Link>
               </div>
             </div>
           </div>

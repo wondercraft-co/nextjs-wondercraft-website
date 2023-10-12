@@ -1,6 +1,8 @@
 export const navigationItems = [
-  { name: "Web", href: "/web-development" },
-  { name: "Shopify", href: "/shopify-development" },
-  { name: "Wordpress", href: "/wordpress-development" },
+  { name: "Web", href: "/services/web-development" },
+  { name: "Shopify", href: "/services/shopify-development" },
+  { name: "Wordpress", href: "/services/wordpress-development" },
   { name: "About us", href: "/about-us" },
 ];
+
+export const meetingLink = "https://savvycal.com/juanpa/chat";

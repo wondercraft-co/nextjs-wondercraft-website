@@ -1,6 +1,4 @@
 import Clients from "@/components/molecules/Clients";
-import MainFooter from "@/components/molecules/MainFooter";
-import MainHeader from "@/components/molecules/MainHeader";
 import MainHero from "@/components/molecules/MainHero";
 import OurServices from "@/components/molecules/OurServices";
 import Testimonial from "@/components/molecules/Testimonial";

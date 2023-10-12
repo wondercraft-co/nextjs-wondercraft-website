@@ -3,7 +3,7 @@ interface IClientsProps {}
 
 const Clients = ({}: IClientsProps) => {
   return (
-    <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <div className="mx-auto max-w-7xl px-6 lg:px-8 mb-52">
       <div className="mx-auto max-w-2xl lg:text-center">
         <h2 className="text-base font-semibold leading-7 text-wonder">
           Who Have We Worked With

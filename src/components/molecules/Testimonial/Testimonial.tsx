@@ -9,7 +9,7 @@ interface ITestimonialProps {
 
 const Testimonial = ({ logo, quote, name, title }: ITestimonialProps) => {
   return (
-    <div className="mx-auto mt-32 max-w-7xl sm:mt-56 sm:px-6 lg:px-8">
+    <div className="mx-auto mt-20 max-w-7xl sm:px-6 lg:px-8">
       <div className="relative isolate overflow-hidden bg-gray-900 px-6 py-24 shadow-2xl sm:rounded-3xl sm:px-24">
         <h2 className="mx-auto max-w-2xl text-center text-3xl font-bold tracking-tight sm:text-4xl text-purple-300 mb-10">
           A little sweet talk!
