@@ -10,8 +10,7 @@ export default function Home() {
       <Clients />
       <Testimonial
         logo="/logos/wondersauce-white.svg"
-        quote={`"They have been and incredible partner in many of our projects. I
-              would trust them any hard project we come across"`}
+        quote={`"They have been an incredible partner in many of our projects. I would trust them with any hard project we come across."`}
         name="Marc Cracco"
         title="CTO of Wondersauce"
       />

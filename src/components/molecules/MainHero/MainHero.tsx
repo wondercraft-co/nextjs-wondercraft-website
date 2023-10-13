@@ -33,7 +33,7 @@ export default function MainHero() {
               <h1 className="text-4xl font-regular tracking-tight text-gray-700 sm:text-6xl">
                 We are{" "}
                 <span className="font-bold text-gray-900">
-                  your marketing agency&apos;s dev team.
+                  your marketing agency&apos;s dev team
                 </span>{" "}
                 <br />
               </h1>
