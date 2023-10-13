@@ -5,9 +5,15 @@ import Testimonial from "@/components/molecules/Testimonial";
 import {
   ArrowDownOnSquareStackIcon,
   BuildingStorefrontIcon,
-  ChatBubbleBottomCenterIcon,
   SwatchIcon,
 } from "@heroicons/react/24/outline";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Shopify Development - Wondercraft",
+  description:
+    "One of our core services is Shopify development. We can help you build a custom theme or app for your client.",
+};
 
 const heroContent = {
   title: "Shopify Development",

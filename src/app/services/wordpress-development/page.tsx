@@ -4,8 +4,15 @@ import PageProjects from "@/components/molecules/PageProjects";
 import Testimonial from "@/components/molecules/Testimonial";
 import {
   ClipboardDocumentCheckIcon,
-  SwatchIcon
+  SwatchIcon,
 } from "@heroicons/react/24/outline";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Wordpress Development - Wondercraft",
+  description:
+    "One of our core services is Wordpress development. We can help you build a custom theme or plugin for your client.",
+};
 
 const heroContent = {
   title: "Wordpress Development",

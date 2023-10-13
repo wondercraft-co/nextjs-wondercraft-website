@@ -1,5 +1,6 @@
 import Clients from "@/components/molecules/Clients";
 import Image from "next/image";
+import { Metadata } from "next";
 
 const stats = [
   { label: "Websites built", value: "+120" },
@@ -72,6 +73,12 @@ const people = [
     I am proud to be part of this great company that works every day to provide its customers with the best experience of usability, quality, security, portability and many things through developments with the latest in development."`,
   },
 ];
+
+export const metadata: Metadata = {
+  title: "About us - Wondercraft",
+  description: "Who we are, what we believe in",
+};
+
 export default function Example() {
   return (
     <main className="isolate">

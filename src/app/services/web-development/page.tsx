@@ -8,6 +8,13 @@ import {
   CursorArrowRaysIcon,
   LockClosedIcon,
 } from "@heroicons/react/24/outline";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Web Development - Wondercraft",
+  description:
+    "We help your branding, design, and creative firm produce an amazing digital product for your client. We want to help you shine!",
+};
 
 const heroContent = {
   title: "Expert Web Development",
