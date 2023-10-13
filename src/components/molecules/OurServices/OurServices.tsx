@@ -45,7 +45,7 @@ const OurServices = ({}: IOurServicesProps) => {
               </p>
               <p className="mt-6">
                 <Link
-                  href="/web-development"
+                  href="/services/web-development"
                   className="text-sm font-semibold leading-6 text-wonder"
                 >
                   Learn more <span aria-hidden="true">→</span>
@@ -64,7 +64,7 @@ const OurServices = ({}: IOurServicesProps) => {
               </p>
               <p className="mt-6">
                 <Link
-                  href="/shopify-development"
+                  href="/services/shopify-development"
                   className="text-sm font-semibold leading-6 text-wonder"
                 >
                   Learn more <span aria-hidden="true">→</span>
@@ -84,7 +84,7 @@ const OurServices = ({}: IOurServicesProps) => {
               </p>
               <p className="mt-6">
                 <Link
-                  href="/wordpress-development"
+                  href="/services/wordpress-development"
                   className="text-sm font-semibold leading-6 text-wonder"
                 >
                   Learn more <span aria-hidden="true">→</span>
