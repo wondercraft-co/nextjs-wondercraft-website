@@ -1,18 +1,15 @@
-"use client";
 import Button from "@/components/atoms/Button";
+import MainHeaderMobileMenu from "@/components/atoms/MainHeaderMobileMenu";
 import { meetingLink, navigationItems } from "@/utils/constants";
 import { cn } from "@/utils/util";
-import { Bars3Icon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 
 interface IMainHeaderProps {
   theme?: "light" | "dark";
 }
 
 const MainHeader = ({ theme = "dark" }: IMainHeaderProps) => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
     <header className="absolute inset-x-0 top-0 z-50">
       <nav
@@ -36,20 +33,7 @@ const MainHeader = ({ theme = "dark" }: IMainHeaderProps) => {
           </Link>
         </div>
         <div className="flex lg:hidden">
-          <button
-            type="button"
-            className={cn(
-              "-m-2.5 inline-flex items-center justify-center rounded-md p-2.5",
-              {
-                "text-gray-700": theme === "dark",
-                "text-white": theme === "light",
-              }
-            )}
-            onClick={() => setMobileMenuOpen(true)}
-          >
-            <span className="sr-only">Open main menu</span>
-            <Bars3Icon className="h-6 w-6" aria-hidden="true" />
-          </button>
+          <MainHeaderMobileMenu theme={theme} />
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
           {navigationItems.map((item) => (
