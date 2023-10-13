@@ -1,4 +1,5 @@
 import { navigationItems } from "@/utils/constants";
+import Link from "next/link";
 
 const navigation = {
   social: [
@@ -76,30 +77,29 @@ export default function MainFooter() {
         >
           {navigationItems.map((item) => (
             <div key={item.name} className="pb-6">
-              <a
+              <Link
                 href={item.href}
                 className="text-sm leading-6 text-gray-600 hover:text-gray-900"
               >
                 {item.name}
-              </a>
+              </Link>
             </div>
           ))}
         </nav>
         <div className="mt-10 flex justify-center space-x-10 hidden">
           {navigation.social.map((item) => (
-            <a
+            <Link
               key={item.name}
               href={item.href}
               className="text-gray-400 hover:text-gray-500"
             >
               <span className="sr-only">{item.name}</span>
               <item.icon className="h-6 w-6" aria-hidden="true" />
-            </a>
+            </Link>
           ))}
         </div>
         <p className="mt-10 text-center text-xs leading-5 text-gray-500">
-          &copy; {new Date().getFullYear()} Wondercraft. All rights
-          reserved.
+          &copy; {new Date().getFullYear()} Wondercraft. All rights reserved.
         </p>
       </div>
     </footer>

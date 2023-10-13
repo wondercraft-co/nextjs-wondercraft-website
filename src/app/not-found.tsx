@@ -1,5 +1,6 @@
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
 import { ArrowUpRightIcon, HeartIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
 
 const links = [
   {
@@ -72,10 +73,10 @@ export default function Example() {
                 </div>
                 <div className="flex-auto">
                   <h3 className="text-sm font-semibold leading-6 text-gray-900">
-                    <a href={link.href}>
+                    <Link href={link.href}>
                       <span className="absolute inset-0" aria-hidden="true" />
                       {link.name}
-                    </a>
+                    </Link>
                   </h3>
                   <p className="mt-2 text-sm leading-6 text-gray-600">
                     {link.description}
@@ -91,13 +92,13 @@ export default function Example() {
             ))}
           </ul>
           <div className="mt-10 flex justify-center">
-            <a
-              href="#"
+            <Link
+              href="/"
               className="text-sm font-semibold leading-6 text-indigo-600"
             >
               <span aria-hidden="true">&larr;</span>
               Back to home
-            </a>
+            </Link>
           </div>
         </div>
       </main>

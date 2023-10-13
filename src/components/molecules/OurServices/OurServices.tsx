@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 interface IOurServicesProps {}
 
 const OurServices = ({}: IOurServicesProps) => {
@@ -42,12 +44,12 @@ const OurServices = ({}: IOurServicesProps) => {
                 effortlessly works.
               </p>
               <p className="mt-6">
-                <a
+                <Link
                   href="/web-development"
                   className="text-sm font-semibold leading-6 text-wonder"
                 >
                   Learn more <span aria-hidden="true">→</span>
-                </a>
+                </Link>
               </p>
             </dd>
           </div>
@@ -61,12 +63,12 @@ const OurServices = ({}: IOurServicesProps) => {
                 platform in the world. Give them a better chance to succeed.
               </p>
               <p className="mt-6">
-                <a
+                <Link
                   href="/shopify-development"
                   className="text-sm font-semibold leading-6 text-wonder"
                 >
                   Learn more <span aria-hidden="true">→</span>
-                </a>
+                </Link>
               </p>
             </dd>
           </div>
@@ -81,12 +83,12 @@ const OurServices = ({}: IOurServicesProps) => {
                 have the control they need without a steep learning curve.
               </p>
               <p className="mt-6">
-                <a
+                <Link
                   href="/wordpress-development"
                   className="text-sm font-semibold leading-6 text-wonder"
                 >
                   Learn more <span aria-hidden="true">→</span>
-                </a>
+                </Link>
               </p>
             </dd>
           </div>

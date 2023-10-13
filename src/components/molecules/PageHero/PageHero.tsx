@@ -1,7 +1,24 @@
+import Button from "@/components/atoms/Button";
+import { meetingLink } from "@/utils/constants";
 import Image from "next/image";
-interface IPageHeroProps {}
+import Link from "next/link";
+interface IPageHeroProps {
+  title: string;
+  description: string;
+  iconSrc: string;
+  imgSrc: string;
+  cta?: string;
+  ctaLink?: string;
+}
 
-const PageHero = ({}: IPageHeroProps) => {
+const PageHero = ({
+  title,
+  description,
+  iconSrc,
+  imgSrc,
+  cta,
+  ctaLink = meetingLink,
+}: IPageHeroProps) => {
   return (
     <div className="relative isolate overflow-hidden bg-gray-900">
       <svg
@@ -47,34 +64,23 @@ const PageHero = ({}: IPageHeroProps) => {
       </div>
       <div className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-40">
         <div className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8">
-          <Image
-            className="h-11"
-            src="/react-logo.svg"
-            alt="Your Company"
-            width={50}
-            height={64}
-          />
+          <Image className="h-11" src={iconSrc} alt="" width={50} height={64} />
           <h1 className="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">
-            Expert Web Development
+            {title}
           </h1>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
-            Web and mobile products that make you and your company proud. We
-            take your design and marketing ideas and bring them to life, to all
-            screen sizes, in a way that beautifully and effortlessly works.
-          </p>
-          <div className="mt-10 flex items-center gap-x-6">
-            <a
-              href="#"
-              className="rounded-md bg-purple-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-purple-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-400"
-            >
-              Get started
-            </a>
-          </div>
+          <p className="mt-6 text-lg leading-8 text-gray-300">{description}</p>
+          {cta ? (
+            <div className="mt-10 flex items-center gap-x-6">
+              <Link href={ctaLink}>
+                <Button>{cta}</Button>
+              </Link>
+            </div>
+          ) : null}
         </div>
         <div className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
           <div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
             <Image
-              src="/projects/axon-desk.png"
+              src={imgSrc}
               alt="App screenshot"
               width={2432}
               height={1442}

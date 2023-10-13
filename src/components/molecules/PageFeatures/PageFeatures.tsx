@@ -2,7 +2,7 @@ import {
   ChatBubbleBottomCenterIcon,
   CommandLineIcon,
   CursorArrowRaysIcon,
-  LockClosedIcon
+  LockClosedIcon,
 } from "@heroicons/react/24/outline";
 
 const features = [
@@ -32,28 +32,42 @@ const features = [
   },
 ];
 
-export default function Example() {
+interface IPageFeatures {
+  eyebrow?: string;
+  title?: string;
+  description?: string;
+  features?: {
+    name: string;
+    description: string;
+    icon: any;
+  }[];
+}
+
+export default function IPageFeatures({
+  eyebrow,
+  title,
+  description,
+  features = [],
+}: IPageFeatures) {
   return (
     <div className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-wonder">
-            Expertise you can trust
+            {eyebrow}
           </h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Everything you need to build a product
+            {title}
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            We&apos;ve been doing this for a while and had worked with lots of
-            tools, Content Management Systems, and frameworks. We&apos;ve found
-            the best ones and put them together to make your life easier.
+            {description}
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
             {features.map((feature) => (
               <div key={feature.name} className="relative pl-16">
-                <dt className="text-base font-semibold leading-7 text-gray-900">
+                <dt className="text-lg font-semibold leading-7 text-gray-900">
                   <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-wonder">
                     <feature.icon
                       className="h-6 w-6 text-white"

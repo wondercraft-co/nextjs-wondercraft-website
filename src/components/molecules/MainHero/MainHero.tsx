@@ -19,27 +19,31 @@ export default function MainHero() {
               }}
             />
           </div>
-          <div className="mx-auto max-w-2xl py-32 sm:py-56 lg:py-80">
+          <div className="mx-auto max-w-3xl py-32 sm:py-56 lg:py-80">
             <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-              <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+              <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20 hidden">
                 Announcing our new Shopify Partners service.{" "}
-                <a href="#" className="font-semibold text-wonder">
+                <Link href="#" className="font-semibold text-wonder">
                   <span className="absolute inset-0" aria-hidden="true" />
                   Read more <span aria-hidden="true">&rarr;</span>
-                </a>
+                </Link>
               </div>
             </div>
             <div className="text-center">
-              <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-                We are your marketing agency&apos;s dev team.
+              <h1 className="text-4xl font-regular tracking-tight text-gray-700 sm:text-6xl">
+                We are{" "}
+                <span className="font-bold text-gray-900">
+                  your marketing agency&apos;s dev team.
+                </span>{" "}
+                <br />
               </h1>
-              <p className="mt-6 text-lg leading-8 text-gray-600">
-                We help your branding, design, and creative firm produce amazing
+              <p className="mt-6 text-xl leading-8 text-gray-600">
+                We focus on helping your branding, design, and creative firm produce amazing
                 digital products for your clients. We want to help you shine!
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <Link href={meetingLink} target="_blank">
-                  <Button>Lets talk about you</Button>
+                  <Button>Let&apos;s talk about your web project</Button>
                 </Link>
               </div>
             </div>
