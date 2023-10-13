@@ -1,24 +1,19 @@
 "use client";
-import React from "react";
-import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
-import { Bars3Icon } from "@heroicons/react/24/outline";
-import { cn } from "@/utils/util";
 import { navigationItems } from "@/utils/constants";
+import { cn } from "@/utils/util";
+import { Bars3Icon } from "@heroicons/react/24/outline";
+import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import Link from "next/link";
-// import {
-//   HamburgerMenuIcon,
-//   DotFilledIcon,
-//   CheckIcon,
-//   ChevronRightIcon,
-// } from '@radix-ui/react-icons';
+import { usePathname } from 'next/navigation';
 interface IMainHeaderMobileMenuProps {
   theme?: "light" | "dark";
 }
 const MainHeaderMobileMenu = ({
   theme = "dark",
 }: IMainHeaderMobileMenuProps) => {
+  const path = usePathname();
   return (
-    <DropdownMenu.Root>
+    <DropdownMenu.Root key={path}>
       <DropdownMenu.Trigger asChild>
         <button
           type="button"
