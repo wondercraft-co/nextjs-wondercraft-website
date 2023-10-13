@@ -59,7 +59,7 @@ export default function Page() {
       <Testimonial
         quote={`“We wanted someone that would really care about our store. We were really thrilled with how Juan handled all our requests. We could not be happier with our decision to hire them”`}
         name="Jaymee Harney"
-        title="CFo @ Janessa Leoné"
+        title="CFO @ Janessa Leoné"
       />
       <PageProjects />
     </>

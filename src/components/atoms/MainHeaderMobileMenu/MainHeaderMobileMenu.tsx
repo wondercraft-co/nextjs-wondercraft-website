@@ -49,7 +49,7 @@ const MainHeaderMobileMenu = ({
             <>
               <DropdownMenu.Item
                 key={item.name}
-                className="group text-gray-900 rounded-[3px] py-2 flex items-center px-1 relative pl-6 select-none outline-none data-[disabled]:text-mauve8 data-[disabled]:pointer-events-none data-[highlighted]:bg-wonder data-[highlighted]:text-white"
+                className="group text-gray-900 rounded-[3px] py-2 flex items-center px-1 relative pl-6 select-none outline-none data-[disabled]:text-mauve8 data-[disabled]:pointer-events-none data-[highlighted]:bg-wonder data-[highlighted]:text-white    "
               >
                 <Link href={item.href}>{item.name}</Link>
               </DropdownMenu.Item>
