@@ -1,12 +1,69 @@
+"use client";
 import Button from "@/components/atoms/Button";
 import { meetingLink } from "@/utils/constants";
+import { cn } from "@/utils/util";
+import Spline from "@splinetool/react-spline";
 import Link from "next/link";
+import { useState } from "react";
+interface IMainHeroProps {
+  theme?: "light" | "dark";
+}
 
-export default function MainHero() {
+export default function MainHero({ theme = "dark" }: IMainHeroProps) {
+  const [splineReady, setSplineReady] = useState(false);
   return (
     <>
-      <div className="bg-white">
-        <div className="relative isolate px-6 pt-14 lg:px-8">
+      <div
+        className={cn("mb-20 md:mb-32", {
+          "bg-gray-900": theme === "dark",
+          "bg-white": theme === "light",
+        })}
+      >
+        <div className="relative isolate px-6 pt-14 lg:px-8 overflow-hidden">
+          <Spline
+            onLoad={() => {
+              setTimeout(() => {
+                setSplineReady(true);
+              }, 100);
+            }}
+            scene="https://prod.spline.design/10D1Hq0QsPJVKX9c/scene.splinecode"
+            className={cn(
+              "absolute -top-10 md:top-0 left-0 transition-opacity duration-1000 ease-in-out -z-10",
+              {
+                "opacity-0": !splineReady,
+                "opacity-100": splineReady,
+              }
+            )}
+          />
+          <svg
+            className="absolute inset-0 -z-10 h-full w-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)] -z-20"
+            aria-hidden="true"
+          >
+            <defs>
+              <pattern
+                id="983e3e4c-de6d-4c3f-8d64-b9761d1534cc"
+                width={200}
+                height={200}
+                x="50%"
+                y={-1}
+                patternUnits="userSpaceOnUse"
+              >
+                <path d="M.5 200V.5H200" fill="none" />
+              </pattern>
+            </defs>
+            <svg x="50%" y={-1} className="overflow-visible fill-gray-800/20">
+              <path
+                d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z"
+                strokeWidth={0}
+              />
+            </svg>
+            <rect
+              width="100%"
+              height="100%"
+              strokeWidth={0}
+              fill="url(#983e3e4c-de6d-4c3f-8d64-b9761d1534cc)"
+            />
+          </svg>
           <div
             className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
             aria-hidden="true"
@@ -21,7 +78,15 @@ export default function MainHero() {
           </div>
           <div className="mx-auto max-w-3xl py-32 sm:py-56 lg:py-80">
             <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-              <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20 hidden">
+              <div
+                className={cn(
+                  "relative rounded-full px-3 py-1 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20 hidden",
+                  {
+                    "text-gray-200": theme === "dark",
+                    "text-gray-600": theme === "light",
+                  }
+                )}
+              >
                 Announcing our new Shopify Partners service.{" "}
                 <Link href="#" className="font-semibold text-wonder">
                   <span className="absolute inset-0" aria-hidden="true" />
@@ -30,16 +95,35 @@ export default function MainHero() {
               </div>
             </div>
             <div className="text-center">
-              <h1 className="text-4xl font-regular tracking-tight text-gray-700 sm:text-6xl">
+              <h1
+                className={cn(
+                  "text-4xl font-regular tracking-tight sm:text-6xl",
+                  {
+                    "text-gray-300": theme === "dark",
+                    "text-gray-700": theme === "light",
+                  }
+                )}
+              >
                 We are{" "}
-                <span className="font-bold text-gray-900">
+                <span
+                  className={cn("font-bold ", {
+                    "text-white": theme === "dark",
+                    "text-gray-900": theme === "light",
+                  })}
+                >
                   your marketing agency&apos;s dev team
                 </span>{" "}
                 <br />
               </h1>
-              <p className="mt-6 text-xl leading-8 text-gray-600">
-                We focus on helping your branding, design, and creative firm produce amazing
-                digital products for your clients. We want to help you shine!
+              <p
+                className={cn("mt-10 text-xl leading-8", {
+                  "text-gray-200": theme === "dark",
+                  "text-gray-600": theme === "light",
+                })}
+              >
+                We focus on helping your branding, design, and creative firm
+                produce amazing digital products for your clients. We want to
+                help you shine!
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <Link href={meetingLink} target="_blank">

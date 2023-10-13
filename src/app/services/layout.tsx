@@ -7,7 +7,7 @@ export default function ServicesLayout({
 }) {
   return (
     <>
-      <MainHeader theme="light" />
+      <MainHeader theme="dark" />
       <main className="">{children}</main>
     </>
   );

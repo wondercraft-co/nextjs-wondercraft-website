@@ -47,7 +47,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#ffffff" />
       </head>
       <body className={inter.className}>
-        <MainHeader />
+        <MainHeader theme="dark" />
         {children}
         <MainFooter />
       </body>

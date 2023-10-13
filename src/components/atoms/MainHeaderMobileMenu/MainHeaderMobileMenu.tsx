@@ -4,7 +4,8 @@ import { cn } from "@/utils/util";
 import { Bars3Icon } from "@heroicons/react/24/outline";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import Link from "next/link";
-import { usePathname } from 'next/navigation';
+import { usePathname } from "next/navigation";
+import { Fragment } from "react";
 interface IMainHeaderMobileMenuProps {
   theme?: "light" | "dark";
 }
@@ -41,7 +42,7 @@ const MainHeaderMobileMenu = ({
             Services
           </DropdownMenu.Label>
           {navigationItems.map((item, index) => (
-            <>
+            <Fragment key={item.href}>
               <DropdownMenu.Item
                 key={item.name}
                 className="group text-gray-900 rounded-[3px] py-2 flex items-center px-1 relative pl-6 select-none outline-none data-[disabled]:text-mauve8 data-[disabled]:pointer-events-none data-[highlighted]:bg-wonder data-[highlighted]:text-white    "
@@ -51,7 +52,7 @@ const MainHeaderMobileMenu = ({
               {index === 2 ? (
                 <DropdownMenu.Separator className="h-[1px] bg-gray-200 m-1" />
               ) : null}
-            </>
+            </Fragment>
           ))}
         </DropdownMenu.Content>
       </DropdownMenu.Portal>

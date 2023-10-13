@@ -61,12 +61,12 @@ const people = [
   },
   {
     name: "Javier Vargas",
-    role: "Senior Web Developer",
+    role: "Senior React Developer",
     imageUrl: "/people/javier.jpeg",
     bio: `"Working at Wondercraft has been an incredible experience for me. As someone transitioning into this new field with limited experience, I'm truly grateful for the opportunity and the professional growth I have achieved here. What sets Wondercraft apart is the commitment to personal development and learning. It's not just about following orders and completing projects; the company genuinely encourages us to learn and improve in various areas."`,
   },
   {
-    name: "Duvan Samorano",
+    name: "Duvan Zamorano",
     role: "QA Engineer",
     imageUrl: "/people/duvan.png",
     bio: `"Wondercraft is a company in which there is good communication, an excellent work environment and the best thing is that you always feel part of it.\n

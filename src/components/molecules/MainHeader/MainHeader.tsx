@@ -20,10 +20,10 @@ const MainHeader = ({ theme = "dark" }: IMainHeaderProps) => {
           <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
             <Image
-              className="h-10 w-auto"
+              className="h-12 w-auto"
               src={
-                theme === "dark"
-                  ? "/wondercraft-purple-horizontal.svg"
+                theme === "light"
+                  ? "/wondercraft-dark-horizontal.svg"
                   : "/wondercraft-white-horizontal.svg"
               }
               alt=""
@@ -41,8 +41,8 @@ const MainHeader = ({ theme = "dark" }: IMainHeaderProps) => {
               key={item.name}
               href={item.href}
               className={cn("text-sm font-semibold leading-6", {
-                "text-gray-900": theme === "dark",
-                "text-white": theme === "light",
+                "text-gray-900": theme === "light",
+                "text-white": theme === "dark",
               })}
             >
               {item.name}
