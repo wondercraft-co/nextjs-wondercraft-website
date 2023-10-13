@@ -3,6 +3,7 @@ import Button from "@/components/atoms/Button";
 import { meetingLink } from "@/utils/constants";
 import { cn } from "@/utils/util";
 import Spline from "@splinetool/react-spline";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
 interface IMainHeroProps {
@@ -20,21 +21,25 @@ export default function MainHero({ theme = "dark" }: IMainHeroProps) {
         })}
       >
         <div className="relative isolate px-6 pt-14 lg:px-8 overflow-hidden">
-          <Spline
-            onLoad={() => {
-              setTimeout(() => {
-                setSplineReady(true);
-              }, 100);
-            }}
-            scene="https://prod.spline.design/10D1Hq0QsPJVKX9c/scene.splinecode"
+          <motion.div
             className={cn(
-              "absolute -top-10 md:top-0 left-0 transition-opacity duration-1000 ease-in-out -z-10",
+              "absolute w-full h-full -top-16 md:top-0 left-0 transition-opacity duration-1000 ease-in-out -z-10",
               {
                 "opacity-0": !splineReady,
                 "opacity-100": splineReady,
               }
             )}
-          />
+          >
+            <Spline
+              onLoad={() => {
+                setTimeout(() => {
+                  setSplineReady(true);
+                }, 100);
+              }}
+              scene="https://prod.spline.design/10D1Hq0QsPJVKX9c/scene.splinecode"
+            />
+          </motion.div>
+
           <svg
             className="absolute inset-0 -z-10 h-full w-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)] -z-20"
             aria-hidden="true"

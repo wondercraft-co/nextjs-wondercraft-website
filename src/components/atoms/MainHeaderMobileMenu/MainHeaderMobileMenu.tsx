@@ -21,8 +21,8 @@ const MainHeaderMobileMenu = ({
           className={cn(
             "-m-2.5 inline-flex items-center justify-center rounded-md p-2.5",
             {
-              "text-gray-700": theme === "dark",
-              "text-white": theme === "light",
+              "text-gray-700": theme === "light",
+              "text-white": theme === "dark",
             }
           )}
         >

@@ -1,7 +1,7 @@
 export const navigationItems = [
-  { name: "Web Development", href: "/services/web-development" },
-  { name: "Shopify", href: "/services/shopify-development" },
-  { name: "Wordpress", href: "/services/wordpress-development" },
+  { name: "Web Dev", href: "/services/web-development" },
+  { name: "Shopify Dev", href: "//shopify-development" },
+  { name: "Wordpress Dev", href: "/services/wordpress-development" },
   { name: "About us", href: "/about-us" },
 ];
 

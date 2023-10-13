@@ -30,7 +30,7 @@ const links = [
   },
 ];
 
-export default function Example() {
+export default function NotFound() {
   return (
     <div className="bg-white isolate min-h-screen flex items-center relative">
       <div

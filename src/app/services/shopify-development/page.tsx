@@ -20,7 +20,7 @@ const heroContent = {
   description:
     "Get your clients' shop running on the leading e-commerce platform in the world. Give them a better chance to succeed.",
   iconSrc: "/shopify-logo.svg",
-  imgSrc: "/projects/sleepcode.gif",
+  imgSrc: "/projects/sleepcode-desk.png",
   cta: "So your client wants a Shopify store?",
 };
 
