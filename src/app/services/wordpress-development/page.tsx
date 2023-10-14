@@ -43,7 +43,43 @@ const pageFeaturesContent = {
     },
   ],
 };
-
+const projects = [
+  {
+    title: "Music First Coalition",
+    agency: "Studio Neue",
+    tags: ["Wordpress", "ACF"],
+    href: "https://musicfirstcoalition.org/",
+    imageUrl: "/projects/musicfirst-bg.png",
+  },
+  {
+    title: "Lifestance",
+    agency: "Wondersauce",
+    tags: ["Wordpress", "ACF"],
+    href: "https://lifestance.com/",
+    imageUrl: "/projects/lifestance-bg.jpg",
+  },
+  {
+    title: "LA LGTB Center",
+    agency: "Wondersauce",
+    tags: ["Wordpress", "ACF"],
+    href: "https://lalgbtcenter.org/",
+    imageUrl: "/projects/lalgtb-bg.jpg",
+  },
+  {
+    title: "Loot Rentals",
+    agency: "Direct",
+    tags: ["Wordpress", "ACF"],
+    href: "https://lootrentals.com/",
+    imageUrl: "/projects/loot-bg.webp",
+  },
+  {
+    title: "Voices 4 Freedom",
+    agency: "Studio Neue",
+    tags: ["Wordpress", "ACF"],
+    href: "https://www.voices4freedom.org/",
+    imageUrl: "/projects/v4f-bg.jpg",
+  },
+];
 export default function Page() {
   return (
     <>
@@ -54,7 +90,7 @@ export default function Page() {
         name="Allison Sromek"
         title="Account Director @ Studio Neue"
       />
-      {/* <PageProjects /> */}
+      <PageProjects projects={projects} />
     </>
   );
 }
