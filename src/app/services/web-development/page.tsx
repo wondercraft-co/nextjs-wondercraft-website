@@ -58,17 +58,48 @@ const pageFeaturesContent = {
   ],
 };
 
+const projects = [
+  {
+    title: "Axon",
+    agency: "Direct",
+    tags: ["Nextjs", "Algolia", "Storyblok"],
+    href: "https://www.axon.com/resources/",
+    imageUrl: "/projects/axon-bg.jpg",
+  },
+  {
+    title: "SkyFi",
+    agency: "Decimal",
+    tags: ["Nextjs", "Contentful"],
+    href: "https://www.skyfi.com/",
+    imageUrl: "/projects/skyfi-bg.jpg",
+  },
+  {
+    title: "The gaming Society",
+    agency: "Wondersauce",
+    tags: ["Nextjs", "Contentful"],
+    href: "https://thegamingsociety.com/",
+    imageUrl: "/projects/tgs-bg.png",
+  },
+  {
+    title: "Modus Agency Website",
+    agency: "Modus Agency",
+    tags: ["Gatsby", "Prismic"],
+    href: "https://www.modusagency.com/",
+    imageUrl: "/projects/modus-bg.png",
+  },
+];
+
 export default function Page() {
   return (
     <>
       <PageHero {...heroContent} />
+      <PageProjects projects={projects} />
       <PageFeatures {...pageFeaturesContent} />
       <Testimonial
         quote={`“The team at Wondercraft exceeded all our expectations, they not only helped us build an amazing product but also contributed hugely to how we present our brand to our clients”`}
         name="John Hill"
         title="CEO @ Hourwise"
       />
-      <PageProjects />
     </>
   );
 }

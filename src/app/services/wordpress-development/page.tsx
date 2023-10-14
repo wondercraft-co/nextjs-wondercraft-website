@@ -54,7 +54,7 @@ export default function Page() {
         name="Allison Sromek"
         title="Account Director @ Studio Neue"
       />
-      <PageProjects />
+      {/* <PageProjects /> */}
     </>
   );
 }
