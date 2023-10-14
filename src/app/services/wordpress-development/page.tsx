@@ -79,6 +79,13 @@ const projects = [
     href: "https://www.voices4freedom.org/",
     imageUrl: "/projects/v4f-bg.jpg",
   },
+  {
+    title: "Voices 4 Freedom",
+    agency: "Studio Neue",
+    tags: ["Wordpress", "ACF"],
+    href: "https://www.voices4freedom.org/",
+    imageUrl: "/projects/v4f-bg.jpg",
+  },
 ];
 export default function Page() {
   return (
