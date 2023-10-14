@@ -1,3 +1,4 @@
+import MainLayout from "@/components/molecules/MainLayout";
 import PageFeatures from "@/components/molecules/PageFeatures";
 import PageHero from "@/components/molecules/PageHero";
 import PageProjects from "@/components/molecules/PageProjects";
@@ -98,7 +99,7 @@ const projects = [
 
 export default function Page() {
   return (
-    <>
+    <MainLayout>
       <PageHero {...heroContent} />
       <PageFeatures {...pageFeaturesContent} />
       <PageProjects projects={projects} title="Our Shopify Work" />
@@ -107,6 +108,6 @@ export default function Page() {
         name="Jaymee Harney"
         title="CFO @ Janessa Leoné"
       />
-    </>
+    </MainLayout>
   );
 }

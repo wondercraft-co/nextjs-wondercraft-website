@@ -1,3 +1,4 @@
+import MainLayout from "@/components/molecules/MainLayout";
 import PageFeatures from "@/components/molecules/PageFeatures";
 import PageHero from "@/components/molecules/PageHero";
 import PageProjects from "@/components/molecules/PageProjects";
@@ -91,7 +92,7 @@ const projects = [
 
 export default function Page() {
   return (
-    <>
+    <MainLayout>
       <PageHero {...heroContent} />
       <PageProjects projects={projects} />
       <PageFeatures {...pageFeaturesContent} />
@@ -100,6 +101,6 @@ export default function Page() {
         name="John Hill"
         title="CEO @ Hourwise"
       />
-    </>
+    </MainLayout>
   );
 }

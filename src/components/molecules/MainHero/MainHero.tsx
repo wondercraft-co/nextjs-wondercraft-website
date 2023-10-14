@@ -3,7 +3,7 @@ import Button from "@/components/atoms/Button";
 import { meetingLink } from "@/utils/constants";
 import { cn } from "@/utils/util";
 import Spline from "@splinetool/react-spline";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
 interface IMainHeroProps {

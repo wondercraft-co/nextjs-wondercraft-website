@@ -1,11 +1,12 @@
 import Clients from "@/components/molecules/Clients";
 import MainHero from "@/components/molecules/MainHero";
+import MainLayout from "@/components/molecules/MainLayout";
 import OurServices from "@/components/molecules/OurServices";
 import Testimonial from "@/components/molecules/Testimonial";
 
 export default function Home() {
   return (
-    <main className="">
+    <MainLayout>
       <MainHero />
       <Clients />
       <Testimonial
@@ -15,6 +16,6 @@ export default function Home() {
         title="CTO of Wondersauce"
       />
       <OurServices />
-    </main>
+    </MainLayout>
   );
 }

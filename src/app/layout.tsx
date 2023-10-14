@@ -1,8 +1,9 @@
 import MainFooter from "@/components/molecules/MainFooter";
 import MainHeader from "@/components/molecules/MainHeader";
-import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -45,12 +46,26 @@ export default function RootLayout({
         />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-YRDCCW9LD2"
+          id="tag_manage"
+        ></Script>
+
+        <Script
+          id="google-analytics"
+          dangerouslySetInnerHTML={{
+            __html: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+      
+        gtag('config', 'G-YRDCCW9LD2');
+        `,
+          }}
+        ></Script>
       </head>
-      <body className={inter.className}>
-        <MainHeader theme="dark" />
-        {children}
-        <MainFooter />
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
