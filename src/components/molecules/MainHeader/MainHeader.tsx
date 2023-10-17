@@ -1,17 +1,41 @@
+"use client";
 import Button from "@/components/atoms/Button";
 import MainHeaderMobileMenu from "@/components/atoms/MainHeaderMobileMenu";
 import { meetingLink, navigationItems } from "@/utils/constants";
+import useScrollDirection from "@/utils/useScrollDirection";
 import { cn } from "@/utils/util";
 import Image from "next/image";
 import Link from "next/link";
+import { useWindowScroll } from "@uidotdev/usehooks";
+import { useMemo } from "react";
 
 interface IMainHeaderProps {
   theme?: "light" | "dark";
 }
 
 const MainHeader = ({ theme = "dark" }: IMainHeaderProps) => {
+  const scrollDirection = useScrollDirection();
+  console.log("🚀 ~ file: MainHeader.tsx:18 ~ MainHeader ~ scrollDirection:", scrollDirection)
+  const [{ y }] = useWindowScroll();
+
+  const finalTheme = useMemo(() => {
+    if (!y || y < 100) {
+      return theme;
+    } else {
+      return "light";
+    }
+  }, [theme, y]);
+
   return (
-    <header className="absolute inset-x-0 top-0 z-50">
+    <header
+      className={cn("fixed inset-x-0 top-0 z-50 transition-all", {
+        "bg-transparent shadow-sm": finalTheme === "dark",
+        "bg-white shadow-sm": finalTheme === "light",
+      })}
+      style={{
+        transform: `translateY(${scrollDirection === "up" ? 0 : "-100%"})`,
+      }}
+    >
       <nav
         className="flex items-center justify-between p-6 lg:px-8"
         aria-label="Global"
@@ -22,8 +46,8 @@ const MainHeader = ({ theme = "dark" }: IMainHeaderProps) => {
             <Image
               className="h-12 w-auto"
               src={
-                theme === "light"
-                  ? "/wondercraft-dark-horizontal.svg"
+                finalTheme === "light"
+                  ? "/wondercraft-purple-horizontal.svg"
                   : "/wondercraft-white-horizontal.svg"
               }
               alt=""
@@ -41,8 +65,8 @@ const MainHeader = ({ theme = "dark" }: IMainHeaderProps) => {
               key={item.name}
               href={item.href}
               className={cn("text-sm font-semibold leading-6", {
-                "text-gray-900": theme === "light",
-                "text-white": theme === "dark",
+                "text-gray-900": finalTheme === "light",
+                "text-white": finalTheme === "dark",
               })}
             >
               {item.name}
