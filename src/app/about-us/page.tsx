@@ -43,7 +43,7 @@ const people = [
     bio: `"The best part of my job is the people I work with. I love the fact that we are a small team, and we all know each other. We are a family, and we care about each other. We are all passionate about what we do, and we are all committed to our clients' success. We are all in this together, and we all want to be the best."`,
   },
   {
-    name: "Diego Velazquez",
+    name: "Diego Velasquez",
     role: "Senior Web Developer",
     imageUrl: "/people/diego.jpeg",
     bio: `"At Wondercraft, I have discovered an environment that values ​​my personal and professional growth. Every day presents an opportunity to learn and be part of a team that fosters creativity and innovation. It is where I have thrived in my personal and professional career."`,

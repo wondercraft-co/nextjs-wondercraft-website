@@ -7,7 +7,9 @@ import Link from "next/link";
 interface IMainHeroProps {
   theme?: "light" | "dark";
 }
-const MainSplineScene = dynamic(() => import("../MainSplineScene"));
+const MainSplineScene = dynamic(() => import("../MainSplineScene"), {
+  ssr: false,
+});
 
 export default function MainHero({ theme = "dark" }: IMainHeroProps) {
   return (
