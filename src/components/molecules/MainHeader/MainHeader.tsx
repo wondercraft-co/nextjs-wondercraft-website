@@ -15,7 +15,6 @@ interface IMainHeaderProps {
 
 const MainHeader = ({ theme = "dark" }: IMainHeaderProps) => {
   const scrollDirection = useScrollDirection();
-  console.log("🚀 ~ file: MainHeader.tsx:18 ~ MainHeader ~ scrollDirection:", scrollDirection)
   const [{ y }] = useWindowScroll();
 
   const finalTheme = useMemo(() => {

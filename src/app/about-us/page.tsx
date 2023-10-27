@@ -40,13 +40,19 @@ const people = [
     name: "Juan Solano",
     role: "Founder & CEO",
     imageUrl: "/people/juan.png",
-    bio: `"The best part of my job is the people I work with. I love the fact that we are a small team, and we all know each other. We are a family, and we care about each other. We are all passionate about what we do, and we are all committed to our clients' success. We are all in this together, and we all want to be the best."`,
+    bio: `"The best part of my job is the people I work with. I love the fact that we are a small team, and we all know each other. We are all passionate about what we do, and we are all committed to our clients' success. We are all in this together, and we all want to be the best."`,
   },
   {
     name: "Diego Velasquez",
-    role: "Senior Web Developer",
+    role: "Web Developer",
     imageUrl: "/people/diego.jpeg",
     bio: `"At Wondercraft, I have discovered an environment that values ​​my personal and professional growth. Every day presents an opportunity to learn and be part of a team that fosters creativity and innovation. It is where I have thrived in my personal and professional career."`,
+  },
+  {
+    name: "Camilo Holguin",
+    role: "Web Developer",
+    imageUrl: "/people/camilo.jpeg",
+    bio: `"Throughout my time at Wondercraft, I've had the privilege of diving deep into awe-inspiring projects. Each one is challenging and rewarding. Together as a team, we push forward, untangle complexities, and transform each challenge into an opportunity for growth."`,
   },
   {
     name: "Julio Salas",
@@ -56,13 +62,13 @@ const people = [
   },
   {
     name: "Sergio Gutierrez",
-    role: "Senior Web Developer",
+    role: "Web Developer",
     imageUrl: "/people/sergio.jpeg",
     bio: `"Working at Wondercraft has been a transformative journey for me.  Every project has been a unique and exciting learning experience, pushing me to grow and evolve. There's always someone with a solution or a new perspective, making our collaborative spirit truly shine. The best part? The mutual respect and open communication within the team and with our clients. It's a stress-free zone where I feel valued and empowered."`,
   },
   {
     name: "Javier Vargas",
-    role: "Senior React Developer",
+    role: "Web Developer",
     imageUrl: "/people/javier.jpeg",
     bio: `"Working at Wondercraft has been an incredible experience for me. As someone transitioning into this new field with limited experience, I'm truly grateful for the opportunity and the professional growth I have achieved here. What sets Wondercraft apart is the commitment to personal development and learning. It's not just about following orders and completing projects; the company genuinely encourages us to learn and improve in various areas."`,
   },
@@ -271,7 +277,7 @@ export default function Example() {
                 Our team
               </h2>
               <p className="mt-6 text-lg leading-8 text-gray-600">
-                We’re a dynamic group of individuals who are passionate about
+                We&apos;re a small but mighty group of individuals who are passionate about
                 what we do and dedicated to delivering the best results for our
                 clients.
               </p>
