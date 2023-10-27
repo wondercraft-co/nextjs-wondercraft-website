@@ -56,7 +56,7 @@ const people = [
   },
   {
     name: "Julio Salas",
-    role: "Front End Developer",
+    role: "Web Developer",
     imageUrl: "/people/julio.jpeg",
     bio: `"At Wondercraft, you're surrounded by incredibly talented people always ready to lend you a hand. It's an experience like no other — truly extraordinary."`,
   },
