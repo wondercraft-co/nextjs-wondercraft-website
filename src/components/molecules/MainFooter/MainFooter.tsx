@@ -99,7 +99,9 @@ export default function MainFooter() {
           ))}
         </div>
         <p className="mt-10 text-center text-xs leading-5 text-gray-500">
-          &copy; {new Date().getFullYear()} Wondercraft. All rights reserved.
+          &copy; {new Date().getFullYear()} Wondercraft. All rights reserved.{" "}
+          <br />
+          Calle 134a # 22 - 06 Apt 403, Bogotá, Colombia
         </p>
       </div>
     </footer>
