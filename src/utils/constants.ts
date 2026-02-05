@@ -5,4 +5,4 @@ export const navigationItems = [
   { name: "About us", href: "/about-us" },
 ];
 
-export const meetingLink = "https://savvycal.com/juanpa/chat";
+export const meetingLink = "https://calendar.app.google/YhsepKXYiP5fAxfQ8";
